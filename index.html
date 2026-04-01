@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pay Mobile App</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+   
+</head>
+    <body class="bg-gray-100 h-[100vh] flex items-center justify-center flex-col">
+        <div class="h-[130px] w-[300px]  mb-3 bg-[url(assets/bg.png)] bg-cover flex items-center justify-center rounded-2xl">
+            <img src="assets/Group.png" alt="logo" class="h-[80px] w-[80px] mt-5 ml-5">
+
+
+        </div>
+
+
+        <form class="bg-white rounded-2xl p-8 w-[350px]">
+            <div>
+                <label class="font-medium" for="mobile">Mobile Number</label>
+                <br>
+                <input id="mobile" type="text" placeholder="Enter mobile number" class="input bg-gray-100 mt-3 rounded-xl" />
+            </div>
+            <div class="mt-4">
+                <label class="font-medium" for="pin">4 Digit Pin</label>
+                <br>
+                <input id="pin" type="text" placeholder="Enter 4-digit pin" class="input bg-gray-100 mt-3 rounded-xl" />
+            </div>
+            <br>
+            <button type="button" id="loginBtn" class="btn btn-primary w-full rounded-xl">Login</button>
+        </form>
+
+    
+     <script src="script.js"></script>
+</body>
+</html> 

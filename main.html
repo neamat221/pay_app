@@ -54,22 +54,22 @@
             <p>Cashout</p>
 
         </div>
-        <div class="shadow-sm  h-[100px] w-[130px] rounded-2xl bg-white text-center ml-4 hover:shadow-lg transition-shadow duration-[1000px]">
+        <div id="transfer-button" class="shadow-sm  h-[100px] w-[130px] rounded-2xl bg-white text-center ml-4 hover:shadow-lg transition-shadow duration-[1000px]">
             <img src="assets/money1.png" alt="logo" class="h-[50px] w-[50px] mt-5 ml-5">
             <p>Transfer Money</p>
 
         </div>
-        <div class="shadow-sm  h-[100px] w-[130px] rounded-2xl bg-white text-center ml-4 hover:shadow-lg transition-shadow duration-[1000px]">
+        <div id="get-bonus-button" class="shadow-sm  h-[100px] w-[130px] rounded-2xl bg-white text-center ml-4 hover:shadow-lg transition-shadow duration-[1000px]">
             <img src="assets/bonus1.png" alt="logo" class="h-[50px] w-[50px] mt-5 ml-5">
             <p>Get Bonus</p>
 
         </div>
-        <div class="shadow-sm  h-[100px] w-[130px] rounded-2xl bg-white text-center ml-4 hover:shadow-lg transition-shadow duration-[1000px]"> 
+        <div id="pay-bill-button" class="shadow-sm  h-[100px] w-[130px] rounded-2xl bg-white text-center ml-4 hover:shadow-lg transition-shadow duration-[1000px]"> 
             <img src="assets/purse1.png" alt="logo" class="h-[50px] w-[50px] mt-5 ml-5">
             <p>Pay Bill</p>
 
         </div>
-        <div class="shadow-sm  h-[100px] w-[130px] rounded-2xl bg-white text-center ml-4 hover:shadow-lg transition-shadow duration-[1000px]"> 
+        <div id="transactions-button" class="shadow-sm  h-[100px] w-[130px] rounded-2xl bg-white text-center ml-4 hover:shadow-lg transition-shadow duration-[1000px]"> 
             <img src="assets/transaction1.png" alt="logo" class="h-[50px] w-[50px] mt-5 ml-5 ">
             <p>Transactions</p>
 
@@ -152,13 +152,86 @@
          <!-- transfer money form -->
           <div id="transfer-money-parent" style="display: none;">
             <h1 class="text-2xl font-bold mb-4">Transfer Money</h1>
+
+            <form class="bg-white rounded-2xl p-8 w-[350px]  mt-3 rounded-xl w-full">
+                
+                <div> 
+                    
+                    <label class="font-medium" for="recipient-number">Recipient Number</label>
+                
+                <input id="recipient-number" type="text" placeholder="Enter 11 digit recipient number" class="input bg-gray-100 mt-3 rounded-xl w-full" />
+                </div>
+                <div>
+                    
+                    <label class="font-medium" for="transfer-amount">Amount</label>
+                <br>
+                <input id="transfer-amount" type="text" placeholder="Enter amount to transfer" class="input bg-gray-100 mt-3 rounded-xl w-full" />
+                </div>
+                <div>
+                   
+                    <label class="font-medium" for="transfer-pin">Pin Number</label>
+                <br> 
+                <input id="transfer-pin" type="text" placeholder="Enter 4-digit pin" class="input bg-gray-100 mt-3 rounded-xl w-full" />
+                </div>
+                <br>
+                <button id="transfer-submit-btn" type="button" class="btn btn-primary w-full rounded-xl">Transfer Money</button>
+            </form>
           </div>
 
-    </div>
-     
-    
-   
+          <!--Get Bonus-->
+          <div id="get-bonus-parent" style="display: none;">
+            <h1 class="text-2xl font-bold mb-4">Get Bonus</h1>
+            
+            <form class="bg-white rounded-2xl p-8 w-[350px]  mt-3 rounded-xl w-full">
+                <div>
+                    <label class="font-medium" for="bonus-code">Bonus Code</label>
+                    <input id="bonus-code" type="text" placeholder="Enter bonus code" class="input bg-gray-100 mt-3 rounded-xl w-full" />
+                </div>
+                <br>
+                <button id="get-bonus-btn" type="button" class="btn btn-primary w-full rounded-xl">Get Bonus</button>   
+            </form>
+          </div>
 
+          <!--Pay Bill-->
+              <div id="pay-bill-parent" style="display: none;">
+                <h1 class="text-2xl font-bold mb-4">Pay Bill</h1>
+                
+                <form class="bg-white rounded-2xl p-8 w-[350px]  mt-3 rounded-xl w-full">
+                 <div>
+                      <label class="font-medium" for="bill-type">Bill Type</label>
+                      <select id="bill-type" class="select w-full mt-3">
+                            <option>Select Bill Type</option>
+                            <option>Electricity</option>
+                            <option>Water</option>
+                            <option>Internet</option>
+                      </select>
+                 </div>
+                 <div>
+                      <label class="font-medium" for="bill-account">Account Number</label>
+                      <input id="bill-account" type="text" placeholder="Enter account number" class="input bg-gray-100 mt-3 rounded-xl w-full" />
+                 </div>
+                 <div>
+                      <label class="font-medium" for="bill-amount">Amount</label>
+                      <input id="bill-amount" type="text" placeholder="Enter amount to pay" class="input bg-gray-100 mt-3 rounded-xl w-full" />
+                 </div>
+                 <div>
+                      <label class="font-medium" for="bill-pin">Pin Number</label>
+                      <input id="bill-pin" type="text" placeholder="Enter 4-digit pin" class="input bg-gray-100 mt-3 rounded-xl w-full" />
+                 </div>
+                 <br>
+                 <button id="pay-bill-btn" type="button" class="btn btn-primary w-full rounded-xl">Pay Bill</button>   
+                </form>
+              </div>
+
+
+    
+              <!--Transactions-->
+              <div id="transactions-parent" style="display: none;">
+                <h1 class="text-2xl font-bold mb-4">Transactions</h1>
+    
+                <!-- Transaction history content can be added here -->
+                <p>Your recent transactions will appear here.</p>
+              </div>
      <script src="main.js"></script>
 </body>
 </html> 
